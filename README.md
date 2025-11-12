@@ -81,6 +81,38 @@ jps
 - Hadoop 3.4.2
 - Spark 4.0.1 (integration verified)
 
+## Manual Installation
+
+For step-by-step manual installation, see [HADOOP_SETUP_GUIDE.md](HADOOP_SETUP_GUIDE.md) which includes:
+
+### Prerequisites
+- Ubuntu/Debian Linux system
+- Terminal access with sudo privileges
+
+### Installation Steps
+1. **System Update** - Update packages
+2. **Java Installation** - Install OpenJDK 11
+3. **Download Hadoop** - Get Hadoop 3.4.2 binary
+4. **Extract and Install** - Set up Hadoop directory
+5. **Environment Configuration** - Configure environment variables
+6. **Hadoop Configuration** - Set up all config files:
+   - `hadoop-env.sh` - Java home configuration
+   - `core-site.xml` - Default filesystem
+   - `hdfs-site.xml` - HDFS settings
+   - `mapred-site.xml` - MapReduce framework
+   - `yarn-site.xml` - YARN configuration
+7. **Format HDFS** - Initialize the namenode
+8. **SSH Setup** - Configure passwordless authentication
+9. **Start Services** - Launch HDFS and YARN
+10. **Verification** - Test installation
+
+### Configuration Files
+The manual guide includes all necessary XML configurations for:
+- Core Hadoop settings
+- HDFS replication and storage
+- YARN resource management
+- MapReduce job execution
+
 ## Notes
 
 - Native library warnings are normal and don't affect functionality

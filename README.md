@@ -78,9 +78,13 @@ jps
 - SSH server
 - sudo privileges
 
+## Documentation
+
+- **[HADOOP_SETUP_GUIDE.md](HADOOP_SETUP_GUIDE.md)** - Complete step-by-step manual installation guide
+- **[README-SERVICE.md](README-SERVICE.md)** - Auto-start service setup and management guide
+
 ## Files
 
-- `HADOOP_SETUP_GUIDE.md` - Complete manual installation guide
 - `install_hadoop.sh` - Automated installation script
 - `start-hadoop.sh` - Start all Hadoop services
 - `stop-hadoop.sh` - Stop all Hadoop services

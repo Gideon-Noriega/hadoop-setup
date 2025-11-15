@@ -19,6 +19,17 @@ chmod +x install_hadoop.sh
 ./stop-hadoop.sh
 ```
 
+### Auto-Start Service (Optional)
+```bash
+# Install as system service for auto-start on boot
+./install-service.sh
+
+# Manage service
+sudo systemctl start hadoop
+sudo systemctl stop hadoop
+sudo systemctl status hadoop
+```
+
 ## What's Included
 
 - **Complete Installation Guide** - Step-by-step manual setup
@@ -73,6 +84,8 @@ jps
 - `install_hadoop.sh` - Automated installation script
 - `start-hadoop.sh` - Start all Hadoop services
 - `stop-hadoop.sh` - Stop all Hadoop services
+- `install-service.sh` - Install Hadoop as auto-start service
+- `hadoop.service` - systemd service configuration
 
 ## Tested Environment
 

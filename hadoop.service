@@ -1,0 +1,20 @@
+[Unit]
+Description=Apache Hadoop Services
+After=network.target ssh.service
+Wants=network.target
+
+[Service]
+Type=forking
+User=gkipsang
+Group=gkipsang
+Environment=HADOOP_HOME=/usr/local/hadoop
+Environment=JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+Environment=PATH=/usr/local/hadoop/sbin:/usr/local/hadoop/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ExecStart=/home/gkipsang/spark_tutorial/hadoop-setup/start-hadoop.sh
+ExecStop=/home/gkipsang/spark_tutorial/hadoop-setup/stop-hadoop.sh
+RemainAfterExit=yes
+TimeoutStartSec=300
+TimeoutStopSec=120
+
+[Install]
+WantedBy=multi-user.target
